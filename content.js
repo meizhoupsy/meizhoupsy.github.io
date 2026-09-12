@@ -176,8 +176,8 @@ window.SITE_CONTENT = {
     }
   ],
   "cv": {
-    "url": "assets/CV_MeiZHou.pdf",
-    "downloadName": "CV_MeiZHou.pdf"
+    "url": "assets/CV_MeiZhou.pdf",
+    "downloadName": "CV_MeiZhou.pdf"
   },
   "contact": {
     "email": "",
