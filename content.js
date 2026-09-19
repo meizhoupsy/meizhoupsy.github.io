@@ -10,7 +10,7 @@ window.SITE_CONTENT = {
     "role": "Dissertation Year Fellow",
     "affiliation": "The University of Hong Kong",
     "affiliationShort": "HKU",
-    "bio": "How do we make sense of a world full of patterns when we can only keep so much in mind? That’s the question behind my research. I work at the intersection of **statistical learning**, **working memory**, and **computational neuroscience**.\n\nI’m interested in how learning and memory shape each other, how the brain builds and stores abstract knowledge, and how computational models can help us understand these processes. I study these questions in both neurotypical individuals and people with neurodevelopmental disorders.",
+    "bio": "How do we make sense of a world full of patterns when our capacity to hold information in mind is limited? My research explores this question at the intersection of **statistical learning**, **working memory**, and **computational neuroscience**.\n\nI’m interested in how learning and memory shape each other, how the brain builds and stores abstract knowledge, and how computational models can help us understand these processes. I study these questions in both neurotypical individuals and people with neurodevelopmental disorders.",
     "draftNote": "",
     "links": [
       {
@@ -70,7 +70,7 @@ window.SITE_CONTENT = {
   },
   "research": [
     {
-      "title": "Learning & working memory",
+      "title": "Learning and memory",
       "description": "How working memory dynamically shapes and is shaped by statistical learning."
     },
     {
