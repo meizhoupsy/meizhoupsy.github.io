@@ -23,7 +23,6 @@
   });
   set("#view-cv-link", c.ui.viewCV);
   set("#draft-note", c.profile.draftNote);
-  set("#research-title", c.ui.interests);
   set("#footer-label", c.ui.footer);
   set("#back-to-top", c.ui.backToTop + " ↑");
   c.navigation.forEach((item) => {
@@ -35,16 +34,6 @@
       : `#${item.id}`;
     $("#site-nav").append(a);
   });
-  c.research.forEach(item => {
-    const article = el("article", "research-card");
-    article.append(el("h3", "", item.title), el("p", "card-description", item.description));
-    $("#research-grid").append(article);
-  });
-  const publicationsLink = el("a", "text-link", "View publications →");
-  publicationsLink.href = "publications.html";
-  const researchLinks = el("div", "hero-actions");
-  researchLinks.append(publicationsLink);
-  $("#research").append(researchLinks);
   const svg = (tag, attributes) => {
     const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
     Object.entries(attributes || {}).forEach(([key, value]) => node.setAttribute(key, value));
