@@ -117,10 +117,12 @@
   timeline.append(list);
   const cvURL = safeURL(c.cv.url, true);
   if (cvURL) {
-    const download = $("#view-cv-link"); download.href = cvURL;
-    if (cvURL.startsWith("assets/")) download.download = c.cv.downloadName;
-    else { download.target = "_blank"; download.rel = "noopener noreferrer"; }
-    download.title = "Original CV · PDF";
+  const cvLink = $("#view-cv-link");
+  cvLink.href = cvURL;
+  cvLink.removeAttribute("download");
+  cvLink.target = "_blank";
+  cvLink.rel = "noopener noreferrer";
+  cvLink.title = "View CV · PDF (opens in a new tab)";
   }
   const contact = section("contact", c.ui.contactTitle, c.ui.contactIntro);
   const contactLinks = el("div", "contact-links");
