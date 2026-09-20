@@ -28,7 +28,11 @@
   set("#back-to-top", c.ui.backToTop + " ↑");
   c.navigation.forEach((item) => {
     const a = el("a", "nav-link", item.label);
-    a.href = item.id === "publications" ? "publications.html" : `#${item.id}`;
+    a.href = item.id === "publications"
+      ? "publications.html"
+      : item.id === "research"
+      ? "research.html"
+      : `#${item.id}`;
     $("#site-nav").append(a);
   });
   c.research.forEach(item => {
