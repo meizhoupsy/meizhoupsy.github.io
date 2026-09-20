@@ -50,7 +50,7 @@ window.SITE_CONTENT = {
     "menu": "Menu",
     "closeMenu": "Close",
     "skip": "Skip to content",
-    "viewCV": "Download CV",
+    "viewCV": "View CV",
     "interests": "Research",
     "publicationsIntro": "",
     "publicationsEmpty": "Publication details pending CV.",
