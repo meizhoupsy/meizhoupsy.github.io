@@ -14,8 +14,6 @@
   $('meta[name="description"]').content = c.meta.description;
   set("#brand-label", c.ui.brand);
   set(".skip-link", c.ui.skip);
-  set("#affiliation-line", `${c.profile.role} · ${c.profile.affiliation}`);
-  set("#profile-name", c.profile.name);
   c.profile.bio.split(/\n\n+/).forEach(paragraph => {
     const paragraphNode = el("p");
     paragraph.split(/(\*\*.*?\*\*)/g).forEach(part => paragraphNode.append(part.startsWith("**") && part.endsWith("**") ? el("strong", "", part.slice(2, -2)) : document.createTextNode(part)));
@@ -27,35 +25,10 @@
   set("#back-to-top", c.ui.backToTop + " ↑");
   c.navigation.forEach((item) => {
     const a = el("a", "nav-link", item.label);
-    a.href = item.id === "publications"
-      ? "publications.html"
-      : item.id === "research"
-      ? "research.html"
-      : `#${item.id}`;
+    a.href = item.id === "publications" ? "publications.html"
+      : item.id === "research" ? "research.html" : `#${item.id}`;
     $("#site-nav").append(a);
   });
-  const svg = (tag, attributes) => {
-    const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
-    Object.entries(attributes || {}).forEach(([key, value]) => node.setAttribute(key, value));
-    return node;
-  };
-  c.network.edges.forEach(([from, to]) => {
-    const a = c.network.nodes.find(node => node.id === from);
-    const b = c.network.nodes.find(node => node.id === to);
-    if (a && b) $("#network-edges").append(svg("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y }));
-  });
-  c.network.nodes.forEach(node => {
-    const group = svg("g", { class: "network-node" + (node.emphasis ? " is-emphasized" : "") });
-    const text = svg("text", { x: node.x, y: node.y - (node.label.length - 1) * 13, "text-anchor": "middle", "dominant-baseline": "middle", "font-size": node.size });
-    node.label.forEach((line, i) => {
-      const span = svg("tspan", { x: node.x, dy: i ? 27 : 0 });
-      span.textContent = line;
-      text.append(span);
-    });
-    group.append(text);
-    $("#network-nodes").append(group);
-  });
-
   const safeURL = (value, allowLocal = false) => {
     if (!value || typeof value !== "string") return null;
     try {
@@ -110,12 +83,11 @@
   timeline.append(list);
   const cvURL = safeURL(c.cv.url, true);
   if (cvURL) {
-  const cvLink = $("#view-cv-link");
-  cvLink.href = cvURL;
-  cvLink.removeAttribute("download");
-  cvLink.target = "_blank";
-  cvLink.rel = "noopener noreferrer";
-  cvLink.title = "View CV · PDF (opens in a new tab)";
+    const cvLink = $("#view-cv-link");
+    cvLink.href = cvURL;
+    cvLink.target = "_blank";
+    cvLink.rel = "noopener noreferrer";
+    cvLink.title = "View CV · PDF (opens in a new tab)";
   }
   const contact = section("contact", c.ui.contactTitle, c.ui.contactIntro);
   const contactLinks = el("div", "contact-links");

@@ -7,8 +7,12 @@
   <title>Research — Mei Zhou</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%228%22%20fill%3D%22%23ffffff%22%2F%3E%3Ctext%20x%3D%2220%22%20y%3D%2228%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20letter-spacing%3D%22-1%22%20fill%3D%22%23182334%22%3EMZ%3C%2Ftext%3E%3C%2Fsvg%3E">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="page.js"></script>
   <style>
-    .research-intro { max-width: 780px; padding: 58px 0 36px; }
+    .research-intro { padding: 48px 0 36px; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 36px; align-items: center; }
+    .research-intro-copy { min-width: 0; }
+    .research-intro .research-network { margin: 0; max-width: 100%; }
     .research-intro .lead { color: var(--blue); font: 500 1.45rem/1.5 var(--serif); }
     .research-intro p { margin: 16px 0 0; }
     .topic-index { display: flex; flex-wrap: wrap; gap: 12px 26px; padding: 18px 0 25px; border-top: 1px solid var(--line); }
@@ -28,7 +32,8 @@
     .topic-copy-wide { max-width: 780px; }
     .research-footer { padding: 22px 0 48px; }
     @media (max-width: 780px) {
-      .research-intro { padding-top: 34px; }
+      .research-intro { padding-top: 34px; grid-template-columns: 1fr; gap: 12px; }
+      .research-intro .research-network { max-width: 380px; margin-inline: auto; }
       .topic-layout { grid-template-columns: 1fr; gap: 24px; }
       .research-topic { padding: 32px 0; }
       .topic-figure { max-width: 520px; }
@@ -52,10 +57,20 @@
   </header>
   <main id="main" class="container">
     <div class="research-intro">
+      <div class="research-intro-copy">
       <h1>Research</h1>
       <p class="lead">How do we build useful knowledge from a complex world with limited memory?</p>
       <p>My research examines the relationship between statistical learning and working memory: how we discover regularities in experience, what we retain from those experiences, and how emerging knowledge guides subsequent processing. I am particularly interested in how specific experiences give rise to abstract representations that extend beyond individual events.</p>
       <p>I bring together behavioral, neural, and computational approaches to investigate these processes, with a current focus on developmental dyslexia alongside neurotypical populations. Together, these perspectives connect three questions: how do we learn regularities, what receives priority in memory, and how do these processes vary across people and contexts?</p>
+      </div>
+      <figure class="research-network" aria-label="Research interests">
+        <svg id="research-network" viewBox="0 0 460 600" role="img" aria-labelledby="network-title network-description">
+          <title id="network-title">Research interests</title>
+          <desc id="network-description">A conceptual map of statistical learning, working memory, computational neuroscience, EEG, eyetracking, attention, probabilistic processing, and related research interests. Connections indicate related interests, not measured relationships.</desc>
+          <g id="network-edges" aria-hidden="true"></g>
+          <g id="network-nodes" aria-hidden="true"></g>
+        </svg>
+      </figure>
     </div>
     <nav class="topic-index" aria-label="Research topics">
       <a href="#statistical-learning">Statistical Learning</a>
@@ -70,8 +85,11 @@
           <p>My research investigates the mechanisms that make this flexibility possible. I examine how learners respond to different levels of uncertainty, extract information from multiple sources of regularity, and form representations that extend beyond individual experiences. I am particularly interested in how statistically learned knowledge is represented in the brain and retrieved to guide subsequent behavior. By bringing together behavioral experiments, neural measures, and computational approaches, I seek to explain how the mind discovers useful structure while remaining responsive to a changing world.</p>
         </div>
       <div class="related-work">
-        <h3>Selected publication</h3>
-        <ul><li><a href="https://doi.org/10.3758/s13423-025-02757-8" target="_blank" rel="noopener noreferrer">Statistical learning prioritizes abstract over item-specific representations</a><span class="citation">Zhou, M., &amp; Tong, S. X. (2025). <em>Psychonomic Bulletin &amp; Review, 32</em>, 3264–3275.</span></li></ul>
+        <h3>Selected publications</h3>
+        <ul>
+          <li><a href="https://doi.org/10.3758/s13423-025-02757-8" target="_blank" rel="noopener noreferrer">Statistical learning prioritizes abstract over item-specific representations</a><span class="citation">Zhou, M., &amp; Tong, S. X. (2025). <em>Psychonomic Bulletin &amp; Review, 32</em>, 3264–3275.</span></li>
+          <!-- Add another publication as a new <li> here. -->
+        </ul>
       </div>
     </section>
     <section class="research-topic" id="memory-prioritization" aria-labelledby="memory-prioritization-title">
@@ -88,8 +106,11 @@
         </figure>
       </div>
       <div class="related-work">
-        <h3>Selected publication</h3>
-        <ul><li><a href="https://doi.org/10.3758/s13423-025-02757-8" target="_blank" rel="noopener noreferrer">Statistical learning prioritizes abstract over item-specific representations</a><span class="citation">Zhou, M., &amp; Tong, S. X. (2025). <em>Psychonomic Bulletin &amp; Review, 32</em>, 3264–3275.</span></li></ul>
+        <h3>Selected publications</h3>
+        <ul>
+          <li><a href="https://doi.org/10.3758/s13423-025-02757-8" target="_blank" rel="noopener noreferrer">Statistical learning prioritizes abstract over item-specific representations</a><span class="citation">Zhou, M., &amp; Tong, S. X. (2025). <em>Psychonomic Bulletin &amp; Review, 32</em>, 3264–3275.</span></li>
+          <!-- Add another publication as a new <li> here. -->
+        </ul>
       </div>
     </section>
     <section class="research-topic" id="dyslexia" aria-labelledby="dyslexia-title">
@@ -106,29 +127,14 @@
         </figure>
       </div>
       <div class="related-work">
-        <h3>Selected publication</h3>
-        <ul><li><a href="https://doi.org/10.1111/cdev.14121" target="_blank" rel="noopener noreferrer">Unraveling the complex interplay between statistical learning and working memory in Chinese children with and without dyslexia across different ages</a><span class="citation">Zhou, M., Zhang, P., Mimeau, C., &amp; Tong, S. X. (2024). <em>Child Development, 95</em>(5), e338–e351.</span></li></ul>
+        <h3>Selected publications</h3>
+        <ul>
+          <li><a href="https://doi.org/10.1111/cdev.14121" target="_blank" rel="noopener noreferrer">Unraveling the complex interplay between statistical learning and working memory in Chinese children with and without dyslexia across different ages</a><span class="citation">Zhou, M., Zhang, P., Mimeau, C., &amp; Tong, S. X. (2024). <em>Child Development, 95</em>(5), e338–e351.</span></li>
+          <!-- Add another publication as a new <li> here. -->
+        </ul>
       </div>
     </section>
     <div class="research-footer"><a class="text-link" href="publications.html">View all publications →</a></div>
   </main>
-  <script>
-  (() => {
-    const button = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('#site-nav');
-    const setMenu = open => {
-      button.setAttribute('aria-expanded', String(open));
-      button.innerHTML = open ? 'Close <span aria-hidden="true">−</span>' : 'Menu <span aria-hidden="true">+</span>';
-      nav.classList.toggle('is-open', open);
-    };
-    button.addEventListener('click', () => setMenu(button.getAttribute('aria-expanded') !== 'true'));
-    nav.addEventListener('click', event => { if (event.target.closest('a')) setMenu(false); });
-    document.addEventListener('click', event => { if (!event.target.closest('.site-header')) setMenu(false); });
-    document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { setMenu(false); button.focus(); }
-    });
-    window.matchMedia('(min-width: 781px)').addEventListener('change', () => setMenu(false));
-  })();
-  </script>
 </body>
 </html>

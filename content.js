@@ -10,7 +10,7 @@ window.SITE_CONTENT = {
     "role": "Dissertation Year Fellow",
     "affiliation": "The University of Hong Kong",
     "affiliationShort": "HKU",
-    "bio": "How do we make sense of a world full of patterns when our capacity to hold information in mind is limited? My research explores this question at the intersection of **statistical learning**, **working memory**, and **computational neuroscience**.\n\nI’m interested in how learning and memory shape each other, how the brain builds and stores abstract knowledge, and how computational models can help us understand these processes. I study these questions in both neurotypical individuals and people with neurodevelopmental disorders.",
+    "bio": "I’m a PhD graduate of the University of Hong Kong, where I’m currently a Dissertation Year Fellow. I’m curious about how we pick up patterns in the world around us—and how what we learn shapes what we remember.\n\nMy research brings together **statistical learning**, **working memory**, and **computational neuroscience**. I explore how we build abstract knowledge from everyday experience, decide what to keep in mind, and use what we know to guide what comes next. I’m also interested in how these processes vary across people, with a current focus on dyslexia.",
     "draftNote": "",
     "links": [
       {
@@ -70,7 +70,7 @@ window.SITE_CONTENT = {
   },
   "research": [
     {
-      "title": "Learning and memory",
+      "title": "Learning & working memory",
       "description": "How working memory dynamically shapes and is shaped by statistical learning."
     },
     {
@@ -177,7 +177,7 @@ window.SITE_CONTENT = {
   ],
   "cv": {
     "url": "assets/CV_MeiZhou.pdf",
-    "downloadName": "CV_MeiZhou.pdf"
+    "downloadName": "CV_MeiZHou.pdf"
   },
   "contact": {
     "email": "",
