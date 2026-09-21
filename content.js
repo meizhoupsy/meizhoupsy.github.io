@@ -10,7 +10,7 @@ window.SITE_CONTENT = {
     "role": "Dissertation Year Fellow",
     "affiliation": "The University of Hong Kong",
     "affiliationShort": "HKU",
-    "bio": "I completed my PhD in Cognitive Neuroscience at the University of Hong Kong, where I’m currently a Dissertation Year Fellow.\n\nI’m curious about how the brain discovers the hidden relations and structures in a complex world despite its limited memory capacity. My work connects statistical learning, working memory, and computational neuroscience. I’m also interested in different ways of learning across neurodiverse populations, with a current focus on dyslexia." 
+    "bio": "I completed my PhD in Cognitive Neuroscience at the University of Hong Kong, where I’m currently a Dissertation Year Fellow.\n\nI’m curious about how the brain discovers the hidden relations and structures in a complex world despite its limited memory capacity. My work connects statistical learning, working memory, and computational neuroscience. I’m also interested in different ways of learning across neurodiverse populations, with a current focus on dyslexia.", 
     "draftNote": "",
     "links": [
       {
