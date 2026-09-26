@@ -325,6 +325,16 @@ window.SITE_CONTENT = {
         "y": 555,
         "size": 16,
         "emphasis": false
+      },
+      {
+        "id": "uncertainty",
+        "label": [
+          "Uncertainty"
+        ],
+        "x": 390,
+        "y": 245,
+        "size": 16,
+        "emphasis": false
       }
     ],
     "edges": [
@@ -387,6 +397,14 @@ window.SITE_CONTENT = {
       [
         "probabilistic",
         "learning"
+      ],
+      [
+        "uncertainty",
+        "learning"
+      ],
+      [
+        "uncertainty",
+        "probabilistic"
       ]
     ]
   },
